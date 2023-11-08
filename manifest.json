@@ -1,0 +1,10 @@
+{
+  "name": "Freiraum Menu Extension",
+  "description": "Extension to view Freiraum's weekly menu",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "favicon-32x32.png"
+  }
+}
