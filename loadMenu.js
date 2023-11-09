@@ -4,7 +4,27 @@ document.addEventListener("DOMContentLoaded", loadMenu);
 async function loadMenu() {
     const html = new DOMParser().parseFromString(await getThisWeeksMenu(), "text/html");
     insertMenuIntoDOM(html);
+    stickyTitle();
     highlightToday();
+}
+
+function stickyTitle() {
+    const title = document.querySelector(".freiraumText");
+    title.style.position = "fixed";
+    const paddingOriginal = document.querySelector(".freiraumWeeklyMenu").style.paddingTop;
+    const weeklyMenu = document.querySelector(".freiraumWeeklyMenu");
+    weeklyMenu.style.paddingTop += title.offsetHeight;
+    document.addEventListener("scroll", () => {
+        console.log("scroll");
+        if (window.scrollY !== 0) {
+            title.style.position = "";
+            weeklyMenu.style.paddingTop = paddingOriginal;
+        }
+        else {
+            title.style.position = "fixed";
+            weeklyMenu.style.paddingTop = paddingOriginal + title.offsetHeight;
+        }
+    });
 }
 
 async function getThisWeeksMenu() {
