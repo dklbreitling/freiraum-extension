@@ -1,0 +1,228 @@
+h1 {
+	font-family: "pfbeausanspro", sans-serif;
+	font-weight: 400;
+	margin: .67em 0;
+	color: #393939;
+}
+
+h2 {
+	font-family: "pfbeausanspro", sans-serif;
+	font-weight: 400;
+	color: #393939;
+}
+
+h3 {
+	font-family: "pfbeausanspro", sans-serif;
+	font-weight: 400;
+	color: #393939;
+}
+
+h4 {
+	font-family: "pfbeausanspro", sans-serif;
+	font-weight: 400;
+	color: #393939;
+}
+
+h5 {
+	font-family: "pfbeausanspro", sans-serif;
+	font-weight: 400;
+	color: #393939;
+}
+
+h6 {
+	font-family: "pfbeausanspro", sans-serif;
+	font-weight: 400;
+	color: #393939;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 0;
+}
+
+body,
+html {
+	font-family: "pfbeausanspro", sans-serif;
+	font-weight: 400;
+}
+
+body strong,
+body b,
+html strong,
+html b {
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+body ul,
+html ul {
+	padding-left: 1.125rem;
+}
+
+body ul li,
+html ul li {
+	margin-bottom: .25rem;
+}
+
+.btn {
+	border-radius: 0;
+	padding: .5rem 1rem;
+	box-shadow: none !important;
+	transition-property: background-color, border-color;
+	transition-duration: .35s;
+	transition-timing-function: ease-in-out;
+}
+
+.btn:focus {
+	outline: 0;
+	box-shadow: none;
+}
+
+a,
+a:visited {
+	color: #000;
+	text-decoration: underline;
+}
+
+a:hover,
+a:visited:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+
+.freiraumWeeklyMenu .table_menus table {
+	margin-bottom: 1rem;
+}
+
+.freiraumWeeklyMenu .table_menus .price_regular {
+	text-align: right;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: .125rem 0;
+}
+
+.freiraumWeeklyMenu .table_menus .price_optional {
+	text-align: right;
+	font-size: .75rem;
+	padding: .125rem 0;
+}
+
+.freiraumWeeklyMenu .table_menus td {
+	font-size: 14px;
+	vertical-align: top;
+	line-height: 1.125;
+}
+
+.freiraumWeeklyMenu .table_menus>td {
+	padding: 0;
+}
+
+.freiraumWeeklyMenu .table_menus .td_day {
+	width: 16.6666%;
+	padding-right: .5rem;
+	padding-left: .5rem;
+	border-left: 2px solid #eee;
+	padding-bottom: 1rem;
+}
+
+.freiraumWeeklyMenu .table_menus .td_day .day_weekday {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.freiraumWeeklyMenu .table_menus .td_day .day_date {
+	text-align: center;
+	padding-bottom: .5rem;
+}
+
+.freiraumWeeklyMenu .table_menus .td_day.today .day_date {
+	border-bottom: 2px solid #000;
+}
+
+.freiraumWeeklyMenu .table_menus .td_station {
+	min-width: 175px;
+	width: 16.6666%;
+	padding: 0;
+	padding-left: .5rem;
+	padding-right: .5rem;
+	border-right: 2px solid #eee;
+}
+
+.freiraumWeeklyMenu .table_menus .td_station .station_name {
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: .125rem 0;
+}
+
+.freiraumWeeklyMenu .table_menus .td_station .station_option {
+	font-size: .75rem;
+	padding: .125rem 0;
+}
+
+.freiraumWeeklyMenu .table_menus .td_day_menu {
+	padding-right: .5rem;
+	padding-left: .5rem;
+	border-left: 2px solid #eee;
+}
+
+.freiraumWeeklyMenu .table_menus .td_day_menu .td_menu_prices {
+	padding: 0;
+	padding-right: .5rem;
+}
+
+.freiraumWeeklyMenu .table_menus .td_day_menu .td_menu_desc {
+	padding: 0;
+}
+
+.freiraumWeeklyMenu .table_menus .td_day_menu .td_menu_desc .menu_name {
+	padding: .125rem 0;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.freiraumWeeklyMenu .table_menus .td_day_menu .td_menu_info {
+	font-size: .625rem;
+	color: #666;
+	text-align: right;
+}
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .75rem;
+	line-height: 1;
+	font-weight: normal;
+	padding: .25rem .125rem;
+	width: 20px;
+	color: #fff;
+	text-align: center;
+}
+
+.icon.icon-vegan {
+	background-color: #9fdaf8;
+}
+
+.icon.icon-vegan::after {
+	content: "VG";
+}
+
+.icon.icon-vegetarian {
+	background-color: #ccdb5a;
+}
+
+.icon.icon-vegetarian::after {
+	content: "V";
+}
+
+body,
+html {
+	height: 100%;
+	background-color: #fff;
+}
