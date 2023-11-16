@@ -10,21 +10,12 @@ async function loadMenu() {
 
 function stickyTitle() {
     const title = document.querySelector(".freiraumText");
-    title.style.position = "fixed";
-    const paddingOriginal = document.querySelector(".freiraumWeeklyMenu").style.paddingTop;
+    title.style.position = "absolute";
+    title.style.top = "0";
+    title.style.left = "0";
     const weeklyMenu = document.querySelector(".freiraumWeeklyMenu");
-    weeklyMenu.style.paddingTop += title.offsetHeight;
-    document.addEventListener("scroll", () => {
-        console.log("scroll");
-        if (window.scrollY !== 0) {
-            title.style.position = "";
-            weeklyMenu.style.paddingTop = paddingOriginal;
-        }
-        else {
-            title.style.position = "fixed";
-            weeklyMenu.style.paddingTop = paddingOriginal + title.offsetHeight;
-        }
-    });
+    weeklyMenu.style.paddingTop += title.offsetHeight + 10;
+    window.addEventListener("scroll", () => title.style.left = window.scrollX + 'px');
 }
 
 async function getThisWeeksMenu() {
