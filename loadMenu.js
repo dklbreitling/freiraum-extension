@@ -9,14 +9,20 @@ async function loadMenu() {
 }
 
 function stickyTitle() {
-    const title = document.querySelector(".freiraumText");
+    const title = document.getElementById("title");
     title.style.position = "absolute";
     title.style.top = "0";
     title.style.left = "0";
+    title.style.paddingLeft = "12px";
     const weeklyMenu = document.querySelector(".freiraumWeeklyMenu");
     weeklyMenu.style.paddingTop += title.offsetHeight + 10;
-    window.addEventListener("scroll", () => title.style.left = window.scrollX + 'px');
+    window.addEventListener("scroll", moveTitle);
 }
+
+const moveTitle = () => {
+    const title = document.getElementById("title");
+    title.style.left = window.scrollX + 'px';
+};
 
 async function getThisWeeksMenu() {
     const object = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
