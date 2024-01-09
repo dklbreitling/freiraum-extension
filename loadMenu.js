@@ -77,4 +77,4 @@ function highlightToday() {
 }
 
 function storeMenu(html) { localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify({ value: html, timestamp: new Date() })); }
-function areSameDay(then, now) { return then.getDay() == now.getDay() && then.getMonth() == now.getMonth() && then.getFullYear() == now.getFullYear(); }
+function areSameDay(then, now) { return then.getDate() == now.getDate() && then.getMonth() == now.getMonth() && then.getFullYear() == now.getFullYear(); }
