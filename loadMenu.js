@@ -62,18 +62,23 @@ function insertMenuIntoDOM(html) {
 
 function highlightToday() {
     const day = new Date().getDay() - 1; /* 0 is Sunday, minus 1 to index */
-    if (day >= 0 && day < 5) {
-        /* Only if today is a weekday. */
-        todayEl = content.querySelectorAll(".td_day")[day];
-        todayEl.classList.add("today");
-        const rect = todayEl.getBoundingClientRect();
-        /* Only scroll if not visible. */
-        if (!(rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)))
-            todayEl.scrollIntoView({ behavior: "instant", block: "end", inline: "end" });
-    }
+    const dayTbl = content.querySelectorAll(".td_day");
+    for (const dayCell of dayTbl) {
+        console.log(dayCell);
+        if (dayCell == dayTbl[day]) {
+            /* Only if today is a weekday. */
+            dayCell.classList.add("today");
+            const rect = dayCell.getBoundingClientRect();
+            /* Only scroll if not visible. */
+            if (!(rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)))
+                dayCell.scrollIntoView({ behavior: "instant", block: "end", inline: "end" });
+        } else {
+            dayCell.classList.remove("today");
+        }
+    } 
 }
 
 function storeMenu(html) { localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify({ value: html, timestamp: new Date() })); }
